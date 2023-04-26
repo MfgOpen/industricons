@@ -1,0 +1,81 @@
+* text=auto
+
+*.doc  diff=astextplain
+*.DOC  diff=astextplain
+*.docx diff=astextplain
+*.DOCX diff=astextplain
+*.dot  diff=astextplain
+*.DOT  diff=astextplain
+*.pdf  diff=astextplain
+*.PDF  diff=astextplain
+*.rtf  diff=astextplain
+*.RTF  diff=astextplain
+
+*.jpg  binary
+*.png  binary
+*.gif  binary
+
+*.exe  binary
+*.dll  binary
+
+*.in text eol=lf
+*.sh text eol=lf
+
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+*.cs text=auto diff=csharp
+*.vb text=auto
+*.resx text=auto
+*.c text=auto
+*.cpp text=auto
+*.cxx text=auto
+*.dsc text=auto
+*.h text=auto
+*.hxx text=auto
+*.py text=auto
+*.rb text=auto
+*.java text=auto
+*.html text=auto
+*.htm text=auto
+*.css text=auto
+*.scss text=auto
+*.sass text=auto
+*.less text=auto
+*.js text=auto
+*.json text=auto
+*.ts text=auto
+*.lisp text=auto
+*.clj text=auto
+*.sql text=auto
+*.php text=auto
+*.lua text=auto
+*.m text=auto
+*.asm text=auto
+*.erl text=auto
+*.fs text=auto
+*.fsx text=auto
+*.hs text=auto
+*.rs text eol=lf
+*.toml text eol=lf
+*.m text=auto
+*.M text=auto
+*.mm text=auto
+*.swift text=auto
+*.proto text=auto
+
+*.csproj text=auto
+*.vbproj text=auto
+*.fsproj text=auto
+*.dbproj text=auto
+*.sln text=auto eol=crlf
+
+*.h linguist-language=C
+
+*.api.md text=auto
+
+*.cake text=auto
+
+*.frag text eol=lf
+*.vert text eol=lf
+*.wgsl text eol=lf

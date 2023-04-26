@@ -1,0 +1,9 @@
+[
+  {
+    "projectName": "carbon-design-system/carbon",
+    "authors": ["IBM Corp."],
+    "projectUrl": "https://github.com/carbon-design-system/carbon",
+    "commitHash": "454ce7ec2016533008decd486922244dee3e659c",
+    "licenseId": "Apache-2.0"
+  }
+]

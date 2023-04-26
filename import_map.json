@@ -1,0 +1,47 @@
+{
+  "imports": {
+    "chalk": "https://esm.sh/v117/chalk@5.2.0",
+    "cross-dirname": "https://esm.sh/v117/cross-dirname@0.1.0",
+    "fantasticon": "https://esm.sh/v117/*fantasticon@2.0.0",
+    "semver": "https://esm.sh/v117/*semver@7.5.0",
+    "svg-sprite": "https://esm.sh/v117/*svg-sprite@2.0.2",
+    "svgo": "https://esm.sh/v117/*svgo@3.0.2"
+  },
+  "scopes": {
+    "https://esm.sh/v117/": {
+      "@resvg/resvg-js": "https://esm.sh/v117/@resvg/resvg-js@2.4.1",
+      "@trysound/sax": "https://esm.sh/v117/@trysound/sax@0.2.0",
+      "@xmldom/xmldom": "https://esm.sh/v117/@xmldom/xmldom@0.8.7",
+      "async": "https://esm.sh/v117/async@3.2.4",
+      "change-case": "https://esm.sh/v117/change-case@4.1.2",
+      "cli-color": "https://esm.sh/v117/cli-color@2.0.3",
+      "commander": "https://esm.sh/v117/commander@9.5.0",
+      "css-select": "https://esm.sh/v117/css-select@5.1.0",
+      "css-selector-parser": "https://esm.sh/v117/css-selector-parser@1.4.1",
+      "css-tree": "https://esm.sh/v117/css-tree@2.3.1",
+      "csso": "https://esm.sh/v117/csso@5.0.5",
+      "cssom": "https://esm.sh/v117/cssom@0.5.0",
+      "glob": "https://esm.sh/v117/glob@8.1.0",
+      "handlebars": "https://esm.sh/v117/handlebars@4.7.7",
+      "js-yaml": "https://esm.sh/v117/js-yaml@4.1.0",
+      "lodash.escape": "https://esm.sh/v117/lodash.escape@4.0.1",
+      "lodash.merge": "https://esm.sh/v117/lodash.merge@4.6.2",
+      "lodash.trim": "https://esm.sh/v117/lodash.trim@4.5.1",
+      "lodash.trimstart": "https://esm.sh/v117/lodash.trimstart@4.5.1",
+      "lru-cache": "https://esm.sh/v117/lru-cache@6.0.0",
+      "mustache": "https://esm.sh/v117/mustache@4.2.0",
+      "picocolors": "https://esm.sh/v117/picocolors@1.0.0",
+      "prettysize": "https://esm.sh/v117/prettysize@2.0.0",
+      "slugify": "https://esm.sh/v117/slugify@1.6.6",
+      "svg2ttf": "https://esm.sh/v117/svg2ttf@6.0.3",
+      "svgicons2svgfont": "https://esm.sh/v117/svgicons2svgfont@12.0.0",
+      "ttf2eot": "https://esm.sh/v117/ttf2eot@3.1.0",
+      "ttf2woff2": "https://esm.sh/v117/ttf2woff2@4.0.5",
+      "ttf2woff": "https://esm.sh/v117/ttf2woff@3.0.0",
+      "vinyl": "https://esm.sh/v117/vinyl@2.2.1",
+      "winston": "https://esm.sh/v117/winston@3.8.2",
+      "xpath": "https://esm.sh/v117/xpath@0.0.32",
+      "yargs": "https://esm.sh/v117/yargs@17.7.1"
+    }
+  }
+}
