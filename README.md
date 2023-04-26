@@ -10,6 +10,16 @@ TODO: Add additional documentation.
 
 TODO: Add additional documentation.
 
+## Building
+
+[Deno](https://deno.com/runtime) is required on the build machine.
+
+Then, execute the following command:
+
+```
+deno task build
+```
+
 ## Attributions
 
 The [IBM Carbon Design System](https://carbondesignsystem.com) Icons are the

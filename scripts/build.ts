@@ -1,10 +1,13 @@
 import { getDirContentsInfo } from "./getDirContentsInfo.ts";
 import { basename, join } from "https://deno.land/std@0.184.0/path/mod.ts";
 import chalk from "chalk";
-import { major, minor } from "semver";
-import SVGSpriter from "svg-sprite";
+import SVGSpriter from "npm:svg-sprite@2.0.2";
 import { Config as SvgoConfig, optimize } from "svgo";
-import { FontAssetType, generateFonts, OtherAssetType } from "fantasticon";
+import {
+  FontAssetType,
+  generateFonts,
+  OtherAssetType,
+} from "npm:fantasticon@2.0.0";
 import { getProjectMetadata } from "./getProjectMetadata.ts";
 import { getDistRootPath, getSrcRootPath } from "./paths.ts";
 
@@ -20,6 +23,7 @@ const absTemplatesDirPath = join(
   getSrcRootPath(),
   "/templates",
 );
+const glyphCodepointMappingFilePath = join(getSrcRootPath(), "mapping.json");
 
 let currentGlyphCodepoint: GlyphCodepoint = 60000;
 // eslint-disable-next-line prefer-const
@@ -27,15 +31,19 @@ const glyphCodepointsMapping: { [glyphName: string]: GlyphCodepoint } = {};
 
 const iconsSrcDirContentsInfo = getDirContentsInfo(absIconsSrcDirPath);
 
-iconsSrcDirContentsInfo.fileNames.forEach((iconFilename) => {
-  glyphCodepointsMapping[iconFilename] = currentGlyphCodepoint;
+iconsSrcDirContentsInfo.baseFileNames.forEach((iconBaseFilename) => {
+  glyphCodepointsMapping[iconBaseFilename] = currentGlyphCodepoint;
   currentGlyphCodepoint += 1;
 });
 
+Deno.removeSync(getDistRootPath(), { recursive: true });
+
 Deno.mkdirSync(getDistRootPath(), { recursive: true });
 
+Deno.removeSync(glyphCodepointMappingFilePath);
+
 Deno.writeFileSync(
-  join(getSrcRootPath(), "mapping.json"),
+  glyphCodepointMappingFilePath,
   encoder.encode(JSON.stringify(glyphCodepointsMapping, null, 2)),
 );
 
@@ -101,9 +109,7 @@ generateFonts({
   assetTypes: [OtherAssetType.CSS, OtherAssetType.HTML],
   formatOptions: {
     ttf: {
-      version: `${major(projectPackageJsonData.fontVersion)}.${
-        minor(projectPackageJsonData.fontVersion)
-      }`,
+      version: `${projectPackageJsonData.fontVersion}`,
       description: projectPackageJsonData.fontDescription || "",
     },
   },
@@ -152,7 +158,8 @@ type SpriterCompilationResult = {
   };
 };
 
-spriter.compile((err, result: SpriterCompilationResult) => {
+// deno-lint-ignore no-explicit-any
+spriter.compile((err: any, result: SpriterCompilationResult) => {
   if (err) {
     console.error(
       chalk.bold.red(

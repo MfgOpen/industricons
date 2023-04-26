@@ -31,7 +31,7 @@ export function getDirContentsInfo(absDirPath: string): DirContentsInfo {
 
   for (const dirEntry of Deno.readDirSync(absDirPath)) {
     const fileName = dirEntry.name;
-    const baseFileName = parse(fileName).base;
+    const baseFileName = parse(fileName).name;
 
     if ([".DS_Store", "Thumbs.db"].includes(fileName)) {
       continue;
